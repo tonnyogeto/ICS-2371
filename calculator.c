@@ -3,23 +3,25 @@
 
 
 int main(){
-
-    int num1;
-    int num2;
+    double num1,num2;
     char operator;
 
-    scanf("Enter num1: %d/n", &num1); 
-    scanf("Enter operator: %d/n", &operator);
-    scanf("Enter num2: %d/n", &num2);
+    printf("\nEnter an operator(+ -):");
+    scanf("%c", &operator); 
 
-    if(operator="+"){
-        printf("The sum is:",num1+num2);
-    } else if(operator="-"){
-        printf("The difference is:", num1-num2);
-    } else{
-        printf('the operator is invalid!');
+    printf("Enter first number:");
+    scanf("%lf", &num1); 
 
+    
+    printf("Enter second number:");
+    scanf("%lf", &num2); 
+
+    switch(operator){
+        default:
+        printf("%c is not valid", operator);
     }
+
+2
 }
     
 
