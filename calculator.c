@@ -3,7 +3,7 @@
 
 
 int main(){
-    double num1,num2;
+    double num1,num2,result;
     char operator;
 
     printf("\nEnter an operator(+ -):");
@@ -17,11 +17,21 @@ int main(){
     scanf("%lf", &num2); 
 
     switch(operator){
+        case "+":
+            result=num1+num2;
+            printf("\nsum: %lf", result);
+            break;
+
+        case "-":
+            result=num1-num2;
+            printf("\ndiffence: %lf", result);
+            break;
+
         default:
-        printf("%c is not valid", operator);
+        printf("%c is not valid", operator); 
     }
 
-2
+
 }
     
 
