@@ -49,7 +49,11 @@ int main() {
     sum = num1 + num2;
     difference = num1 - num2;
 
-    printf("\nThe sum of the numbers is: %lf\nThe difference of the two numbers is5: %lf", sum, difference);
+
+    printf("\nThe sum of the numbers is: %lf", sum);
+    printf("\nThe difference of the numbers is: %lf", difference);
+
+    printf("\nThe sum of the numbers is: %lf and the difference of the two numbers is: %lf", sum, difference);
 
     return 0;
 }
