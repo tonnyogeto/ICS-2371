@@ -1,7 +1,10 @@
+// TONNY MAISHA OGETO
+// ENE212-0086/2021
+
 #include <stdio.h>
 #include <math.h>
 
-double addition(double num1, double num2) {
+double summation(double num1, double num2) {
     return num1 + num2;
 }
 
@@ -14,7 +17,7 @@ double division(double num1, double num2) {
         return num1 / num2;
     else {
         printf("Error: Division by zero\n");
-        return 0; // or any other appropriate handling
+        return 0; 
     }
 }
 
@@ -27,7 +30,7 @@ double modulo(double num1, double num2) {
         return fmod(num1, num2);
     else {
         printf("Error: Modulo by zero\n");
-        return 0; // or any other appropriate handling
+        return 0; 
     }
 }
 
@@ -77,3 +80,4 @@ int main() {
     }
     return 0;
 }
+
