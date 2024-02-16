@@ -2,38 +2,47 @@
 // ENE212-0086/2021
 
 #include <stdio.h>
+#include <stdbool.h>
 
-// Function to check if a number is palindrome
-int isPalindrome(int num) {
-    int reversedNum = 0;
-    int originalNum = num;
+bool isPalindrome(int *arr, int n) {
+    int *left = arr;           // Pointer to the beginning of the array
+    int *right = arr + n - 1;  // Pointer to the end of the array
 
-    // Reverse the number
-    while (num > 0) {
-        int digit = num % 10;
-        reversedNum = reversedNum * 10 + digit;
-        num /= 10;
+    // Continue comparing until left and right pointers meet
+    while (left < right) {
+        // If values at left and right indices are not equal, it's not a palindrome
+        if (*left != *right)
+            return false;
+        // Move the left pointer to the right and the right pointer to the left
+        left++;
+        right--;
     }
-
-    // Check if the reversed number is equal to the original number
-    if (reversedNum == originalNum)
-        return 1; // Palindrome
-    else
-        return 0; // Not a palindrome
+    // If the loop completes without breaking, it's a palindrome
+    return true;
 }
 
 int main() {
-    int number;
+    int num, temp, digit, i;
+    int arr[20]; // Assuming a maximum of 20 digits
 
-    // Input number from user
-    printf("Enter a number: ");
-    scanf("%d", &number);
+    printf("Enter an integer: ");
+    scanf("%d", &num);
 
-    // Check if the number is palindrome
-    if (isPalindrome(number))
-        printf("%d is a palindrome.\n", number);
+    // Convert the integer to an array of digits
+    temp = num;
+    i = 0;
+    while (temp != 0) {
+        digit = temp % 10;
+        arr[i] = digit;
+        temp /= 10;
+        i++;
+    }
+
+    if (isPalindrome(arr, i))
+        printf("%d is a palindrome.\n", num);
     else
-        printf("%d is not a palindrome.\n", number);
+        printf("%d is not a palindrome.\n", num);
 
     return 0;
 }
+
