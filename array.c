@@ -24,7 +24,7 @@ int main() {
     }
 
     // Calculate the middle index
-    middle = 9 / 2; 
+    middle = length / 2; 
 
     // Save the middle element
     temp = a[middle];
