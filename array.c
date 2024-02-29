@@ -10,17 +10,23 @@ int compare(const void *x_void, const void *y_void) {
 }
 
 int main() {
-    int a[9] = {6, 2, 9, 7, 5, 1, 3, 8, 4};
+    int a[9];
     int length = 9;
     int i, position, deletedElement;
+
+    // Prompt the user to enter each element of the array
+    printf("Enter %d elements for the array:\n", length);
+    for (i = 0; i < length; i++) {
+        printf("Element %d: ", i);
+        scanf("%d", &a[i]);
+    }
 
     // Sorting the array in ascending order
     qsort(a, length, sizeof(int), compare);
 
-
     // Printing of original array
-    printf("Original array:");
-    for (i = 0; i < 9; i++) {
+    printf("\nOriginal array:");
+    for (i = 0; i < length; i++) {
         printf(" %d", a[i]);
     }
 
@@ -67,7 +73,6 @@ int main() {
 
     return 0;
 }
-
 
 
 
