@@ -25,14 +25,14 @@ double multiplication(double num1, double num2) {
     return num1 * num2;
 }
 
-double modulo(double num1, double num2) {
-    if (num2 != 0)
-        return fmod(num1, num2);
-    else {
-        printf("Error: Modulo by zero\n");
-        return 0; 
-    }
-}
+// double modulo(double num1, double num2) {
+//     if (num2 != 0)
+//         return fmod(num1, num2);
+//     else {
+//         printf("Error: Modulo by zero\n");
+//         return 0; 
+//     }
+// }
 
 int main() {
     double num1, num2;
@@ -50,7 +50,7 @@ int main() {
     double result;
     switch (operator) {
         case '+':
-            result = addition(num1, num2);
+            result = summation(num1, num2);
             printf("Sum is: %lf\n", result);
             break;
 
@@ -69,10 +69,10 @@ int main() {
             printf("Product is: %lf\n", result);
             break;
 
-        case '%':
-            result = modulo(num1, num2);
-            printf("Remainder is: %lf\n", result);
-            break;
+        // case '%':
+        //     result = modulo(num1, num2);
+        //     printf("Remainder is: %lf\n", result);
+        //     break;
 
         default:
             printf("Invalid operator\n");
