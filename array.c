@@ -1,3 +1,6 @@
+// TONNY MAISHA OGETO
+// ENE212-0086/2021
+
 #include <stdio.h>
 #include <stdlib.h> 
 
